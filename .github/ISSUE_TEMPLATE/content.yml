@@ -1,0 +1,22 @@
+name: Content improvement
+description: Suggestion for copy, landing feature, or new section
+title: '[content] '
+labels: ['enhancement']
+body:
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+    validations:
+      required: true
+
+  - type: dropdown
+    id: page
+    attributes:
+      label: Page
+      options:
+        - Home
+        - Features
+        - Self-host
+        - Roadmap
+        - General / layout

@@ -1,0 +1,72 @@
+/*
+ * Scalar layers must come AFTER Tailwind utilities so Scalar's internal
+ * .scalar-app utilities win inside the API reference widget.
+ */
+@layer theme, base, components, utilities, scalar-base, scalar-theme, scalar-config;
+
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+@source "./**/*.{html,js,ts,jsx,tsx}";
+
+@theme {
+  --color-bm-navy: #1e293b;
+  --color-bm-blue: #2563eb;
+  --color-bm-bg: #f8fafc;
+  --color-bm-board: #f1f5f9;
+  --color-bm-textDark: #0f172a;
+  --color-bm-textMuted: #64748b;
+  --color-bm-border: #e2e8f0;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@import "@scalar/api-reference-react/style.css";
+
+:root {
+  --scalar-color-accent: #2563eb;
+  --scalar-background-1: #ffffff;
+  --scalar-background-2: #f8fafc;
+  --scalar-background-3: #f1f5f9;
+  --scalar-color-1: #0f172a;
+  --scalar-color-2: #64748b;
+  --scalar-color-3: #94a3b8;
+  --scalar-border-color: #e2e8f0;
+  --scalar-color-blue: #2563eb;
+  --scalar-button-1: #2563eb;
+  --scalar-button-1-hover: #1d4ed8;
+  --scalar-button-1-color: #ffffff;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-bm-textDark);
+  background-color: var(--color-bm-bg);
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+.scalar-bm-theme {
+  font-family: var(--font-sans);
+}
+
+/* Embedded API reference — fill the pane below site header, not full viewport */
+.api-reference-page {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+.api-reference-page__docs {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  padding-top: 3.5rem;
+}
+
+.api-reference-page__docs .scalar-api-reference,
+.api-reference-page__docs .references-layout {
+  min-height: 100% !important;
+  height: 100%;
+}

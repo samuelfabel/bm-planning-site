@@ -1,0 +1,24 @@
+name: Site bug
+description: Visual issue, broken link, or build error
+title: '[site] '
+labels: ['bug']
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      placeholder: /features, /roadmap, etc.
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
