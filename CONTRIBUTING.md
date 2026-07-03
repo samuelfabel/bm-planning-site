@@ -14,7 +14,7 @@ npm run dev
 - Marketing copy (English)
 - Pages `/features`, `/self-host`, `/roadmap`
 - Accessibility and SEO
-- GitHub Pages workflow (`.github/workflows/deploy.yml`)
+- Deploy workflow lives in [bm-planning](../bm-planning) (`.github/workflows/pages.yml`)
 
 ## Checks
 

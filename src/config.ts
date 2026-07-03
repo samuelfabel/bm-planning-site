@@ -4,7 +4,7 @@ export const GITHUB_REPO_URL =
   import.meta.env.VITE_GITHUB_REPO_URL ?? `https://github.com/${GITHUB_USER}/bm-planning`;
 
 export const GITHUB_SITE_URL =
-  import.meta.env.VITE_SITE_URL ?? `https://${GITHUB_USER}.github.io/bm-planning-site/`;
+  import.meta.env.VITE_SITE_URL ?? `https://${GITHUB_USER}.github.io/bm-planning/`;
 
 export const BASE_PATH = import.meta.env.BASE_URL;
 

@@ -34,7 +34,7 @@ Open `http://localhost:5173`.
 To simulate the GitHub Pages base path:
 
 ```bash
-VITE_BASE_PATH=/bm-planning-site/ npm run dev
+VITE_BASE_PATH=/bm-planning/ npm run dev
 ```
 
 ## Build
@@ -46,20 +46,20 @@ npm run preview
 
 ## Deploy to GitHub Pages
 
-### 1. Configure the repository
+The public URL is **`https://samuelfabel.github.io/bm-planning/`** — the base path must match the **Pages host repo** (`bm-planning`), not this repo name.
 
-1. Create the `bm-planning-site` repository on GitHub (under `samuelfabel`)
-2. In **Settings → Pages → Build and deployment**, select **GitHub Actions**
-3. Adjust `VITE_BASE_PATH` in `.github/workflows/deploy.yml` if the repo name differs
-4. `VITE_GITHUB_REPO_URL` defaults to `https://github.com/samuelfabel/bm-planning`
+### 1. Configure Pages on `bm-planning`
+
+1. In [samuelfabel/bm-planning](https://github.com/samuelfabel/bm-planning) → **Settings → Pages → Build and deployment**, select **GitHub Actions**
 
 ### 2. Publish
 
-Push to `main` triggers the **Deploy GitHub Pages** workflow.
+- Push to `main` on **bm-planning** runs `.github/workflows/pages.yml` (checks out this repo and builds with `VITE_BASE_PATH=/bm-planning/`)
+- After changing only the site, run **Deploy site (GitHub Pages)** manually on `bm-planning`, or push any commit there
 
 ### 3. Verify
 
-After the workflow completes: **Settings → Pages** (e.g. `https://samuelfabel.github.io/bm-planning-site/`).
+`https://samuelfabel.github.io/bm-planning/`
 
 ## Structure
 
@@ -70,7 +70,6 @@ bm-planning-site/
 │   ├── pages/         # /, /features, /docs, /self-host, /roadmap
 │   └── config.ts      # roadmap, URLs
 ├── public/
-├── .github/workflows/deploy.yml
 └── vite.config.ts     # base path via VITE_BASE_PATH
 ```
 
