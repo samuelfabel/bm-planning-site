@@ -85,8 +85,8 @@ export const ROADMAP_FUTURE: ReadonlyArray<{
     id: 'docker-hub',
     horizon: 'now',
     title: 'Docker Hub image',
-    description: 'Container image samuelfabel/bm-planning — release workflow in repo; first Hub publish pending setup.',
-    status: 'partial',
+    description: 'Container image samuelfabel/bm-planning — release workflow in repo.',
+    status: 'done',
   },
   {
     id: 'offline',
