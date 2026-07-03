@@ -44,7 +44,7 @@ export function ApiReferenceScalar({ specUrl }: ApiReferenceScalarProps) {
     () => ({
       url: specUrl,
       layout: 'modern' as const,
-      theme: 'default',
+      theme: 'default' as const,
       forceDarkModeState: 'light' as const,
       hideDarkModeToggle: true,
       showDeveloperTools: 'never' as const,
